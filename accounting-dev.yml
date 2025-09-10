@@ -1,1 +1,5 @@
-
+spring:
+  datasource:
+    url: accounting_database_dev_url
+    username: accounting_database_dev_username
+    password: accounting_database_dev_password
