@@ -1,1 +1,21 @@
+spring:
+  application:
+    name: RELOCATION-SERVICE
 
+resilience4j:
+  circuitbreaker:
+    instances:
+      accounting-service:
+        base-config: default
+      security-service:
+        base-config: default
+      profiler-service:
+        base-config: default
+  retry:
+    instances:
+      accounting-service:
+        base-config: default
+      security-service:
+        base-config: default
+      profiler-service:
+        base-config: default
