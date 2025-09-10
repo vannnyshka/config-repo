@@ -8,7 +8,14 @@ spring:
       ddl-auto: none
   liquibase:
     change-log: db.changelog/changelog.xml
-
+app:
+  accounting:
+    base-url: ${ACCOUNTING_BASE_URL}
+  profiler:
+    base-url: ${PROFILER_BASE_URL}
+  security:
+    base-url: ${SECURITY_BASE_URL}
+    
 logging:
   level:
     by.javaguru.jdmik7.relocationservice: DEBUG
