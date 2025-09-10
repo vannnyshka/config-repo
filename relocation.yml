@@ -37,6 +37,7 @@ resilience4j:
         base-config: default
       profiler-service:
         base-config: default
+    circuit-breaker-aspect-order: 1
   retry:
     instances:
       accounting-service:
@@ -45,3 +46,4 @@ resilience4j:
         base-config: default
       profiler-service:
         base-config: default
+    retry-aspect-order: 2
