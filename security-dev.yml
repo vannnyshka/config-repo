@@ -1,5 +1,1 @@
-spring:
-  datasource:
-    url: security_database_dev_url
-    username: security_database_dev_username
-    password: security_database_dev_password
+
