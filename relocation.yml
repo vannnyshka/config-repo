@@ -1,4 +1,3 @@
-filedddd: true
 spring:
   application:
     name: RELOCATION-SERVICE
