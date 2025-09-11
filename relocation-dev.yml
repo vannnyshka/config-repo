@@ -1,10 +1,3 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5434/relocation-db
-    username: relocation_user
-    password: test
-    driver-class-name: org.postgresql.Driver
-
 logging:
   by.javaguru.jdmik7.relocationservice: DEBUG
   org.hibernate.SQL: DEBUG
