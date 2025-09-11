@@ -4,6 +4,7 @@ spring:
     username: ${DATABASE_USERNAME}
     password: ${DATABASE_PASSWORD}
 
+
 resilience4j:
   circuitbreaker:
     configs:
@@ -15,6 +16,15 @@ resilience4j:
         wait-duration-in-open-state: 30s
         permitted-number-of-calls-in-half-open-state: 10
         event-consumer-buffer-size: 100
+        ignore-exceptions:
+          - by.javaguru.jdmik7.relocationservice.api.exception.ServiceBadRequestException
+    instances:
+      accounting-service:
+        base-config: default
+      security-service:
+        base-config: default
+      profiler-service:
+        base-config: default
 
   retry:
     configs:
@@ -23,3 +33,11 @@ resilience4j:
         wait-duration: 5s
         ignore-exceptions:
           - by.javaguru.jdmik7.relocationservice.api.exception.ServiceBadRequestException
+    instances:
+      accounting-service:
+        base-config: default
+      security-service:
+        base-config: default
+      profiler-service:
+        base-config: default
+      retry-aspect-order: 2
