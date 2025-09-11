@@ -1,3 +1,8 @@
+logging:
+  by.javaguru.jdmik7.relocationservice: DEBUG
+  org.hibernate.SQL: DEBUG
+  org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
 management:
   endpoints:
     web:
