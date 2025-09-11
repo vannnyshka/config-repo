@@ -7,7 +7,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: mapping,bus-refresh,bus-env,circuitbreakerevents,retry
+        include: mapping,bus-refresh,bus-env,circuitbreakerevents,retry,env,configprops
   endpoint:
     health:
       enabled: true
