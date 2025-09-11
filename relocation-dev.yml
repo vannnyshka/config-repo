@@ -1,3 +1,4 @@
+fileloaded: true
 logging:
   by.javaguru.jdmik7.relocationservice: DEBUG
   org.hibernate.SQL: DEBUG
