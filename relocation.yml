@@ -1,11 +1,6 @@
 spring:
   application:
     name: RELOCATION-SERVICE
-  datasource:
-    url: jdbc:postgresql://localhost:5434/relocation-db
-    username: relocation_user
-    password: test
-    driver-class-name: org.postgresql.Driver
   jpa:
     open-in-view: false
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -13,39 +8,4 @@ spring:
       ddl-auto: none
   liquibase:
     change-log: db.changelog/changelog.xml
-logging:
-    by.javaguru.jdmik7.relocationservice: DEBUG
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: mapping,bus-refresh,bus-env,circuitbreakerevents,retry
-  endpoint:
-    health:
-      enable: true
-      show-details: always
-  health:
-    circuitbreakers:
-      enabled: true
-resilience4j:
-  circuitbreaker:
-    instances:
-      accounting-service:
-        base-config: default
-      security-service:
-        base-config: default
-      profiler-service:
-        base-config: default
-    circuit-breaker-aspect-order: 1
-retry:
-  instances:
-    accounting-service:
-      base-config: default
-    security-service:
-      base-config: default
-    profiler-service:
-      base-config: default
-    retry-aspect-order: 2
