@@ -12,3 +12,40 @@ spring:
       ddl-auto: none
   liquibase:
     change-log: db.changelog/changelog.xml
+
+resilience4j:
+  circuitbreaker:
+    circuit-breaker-aspect-order: 1
+    configs:
+      default:
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 5
+        failure-rate-threshold: 50
+        minimum-number-of-calls: 2
+        wait-duration-in-open-state: 5s
+        permitted-number-of-calls-in-half-open-state: 3
+        event-consumer-buffer-size: 20
+        ignore-exceptions:
+          - by.javaguru.jdmik7.relocationservice.api.exception.ServiceBadRequestException
+    instances:
+      accounting-service:
+        base-config: default
+      security-service:
+        base-config: default
+      profiler-service:
+        base-config: default
+  retry:
+    retry-aspect-order: 2
+    configs:
+      default:
+        max-attempts: 3
+        wait-duration: 10s
+        ignore-exceptions:
+          - by.javaguru.jdmik7.relocationservice.api.exception.ServiceBadRequestException
+    instances:
+      accounting-service:
+        base-config: default
+      security-service:
+        base-config: default
+      profiler-service:
+        base-config: default
