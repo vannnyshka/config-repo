@@ -8,7 +8,7 @@ spring:
         spring:
           json:
             trusted:
-              packages: by.javaguru.jdmik7.core
+              packages: by.javaguru.jdmik7.core.event
       bootstrap-servers: localhost:9091,localhost:9092
     producer:
       bootstrap-servers: localhost:9091,localhost:9092
