@@ -1,4 +1,7 @@
 spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9091,localhost:9092
   application:
     name: RELOCATION-SERVICE
   datasource:
@@ -12,6 +15,14 @@ spring:
       ddl-auto: none
   liquibase:
     change-log: db.changelog/changelog.xml
+
+producer:
+  accounting:
+    topic:
+      name: ${ACCOUNTING_TOPIC_NAME}
+  security:
+    topic:
+      name: ${SECURITY_TOPIC_NAME}
 
 resilience4j:
   circuitbreaker:
