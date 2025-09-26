@@ -1,1 +1,16 @@
-
+spring:
+  application:
+    name: NOTIFICATION-SERVICE
+  kafka:
+    consumer:
+      group-id: accounting-request-events
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: by.javaguru.jdmik7.relocationservice.usecases.dto
+      bootstrap-servers: localhost:9091,localhost:9092
+consumer:
+  notification:
+    topic:
+      name: ${NOTIFICATION_CONSUMER_TOPIC_NAME}
