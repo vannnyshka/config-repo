@@ -1,3 +1,42 @@
 spring:
+  datasource:
+    username: test
+    password: test
+    url: jdbc:h2:mem:testdb
+  jpa:
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
   application:
     name: SECURITY-SERVICE
+  kafka:
+    consumer:
+      group-id: security-request-events
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: by.javaguru.jdmik7.core.command
+      bootstrap-servers: localhost:9091,localhost:9092
+    producer:
+      bootstrap-servers: localhost:9091,localhost:9092
+      acks: all
+      properties:
+        delivery:
+          timeout:
+            ms: 60000
+        linger:
+          ms: 0
+        request:
+          timeout:
+            ms: 30000
+producer:
+  relocation:
+    responses:
+      topic:
+        name: ${RELOCATION_RESPONSES_TOPIC_NAME}
+consumer:
+  accounting:
+    topic:
+      name: ${SECURITY_CONSUMER_TOPIC_NAME}
