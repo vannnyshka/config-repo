@@ -35,6 +35,9 @@ spring:
     change-log: db.changelog/changelog.xml
 
 producer:
+  notification:
+    topic:
+      name: ${NOTIFICATION_TOPIC_NAME}
   accounting:
     topic:
       name: ${ACCOUNTING_TOPIC_NAME}
