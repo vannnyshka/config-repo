@@ -23,10 +23,10 @@ spring:
           timeout:
             ms: 30000
 producer:
-  accounting:
-    allowed:
+  relocation:
+    responses:
       topic:
-        name: ${ACCOUNTING_ALLOWED_TOPIC_NAME}
+        name: ${RELOCATION_RESPONSES_TOPIC_NAME}
 consumer:
   accounting:
     topic:
