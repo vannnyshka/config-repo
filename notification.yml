@@ -3,7 +3,7 @@ spring:
     name: NOTIFICATION-SERVICE
   kafka:
     consumer:
-      group-id: accounting-request-events
+      group-id: notification-request-events
       properties:
         spring:
           json:
