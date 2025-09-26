@@ -37,6 +37,6 @@ producer:
       topic:
         name: ${RELOCATION_RESPONSES_TOPIC_NAME}
 consumer:
-  accounting:
+  security:
     topic:
       name: ${SECURITY_CONSUMER_TOPIC_NAME}
