@@ -14,8 +14,6 @@ spring:
       bootstrap-servers: localhost:9091,localhost:9092
       acks: all
       properties:
-        enable:
-          idempotence: true
         delivery:
           timeout:
             ms: 60000
