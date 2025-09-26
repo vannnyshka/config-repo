@@ -34,6 +34,12 @@ producer:
     topic:
       name: ${SECURITY_TOPIC_NAME}
 
+consumer:
+  relocation:
+    topic:
+      name: ${RELOCATION_TOPIC_NAME}
+
+
 resilience4j:
   circuitbreaker:
     circuit-breaker-aspect-order: 1
