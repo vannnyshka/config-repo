@@ -6,3 +6,27 @@ eureka:
       defaultZone: http://localhost:8087/eureka/
   instance:
     prefer-ip-address: true
+app:
+  kafka:
+    topics:
+      relocation:
+        name: ${RELOCATION_TOPIC_NAME}
+        partitions: 3
+        replicas: 3
+        min-in-sync-replicas: 2
+
+      accounting:
+        name: ${ACCOUNTING_TOPIC_NAME}
+        partitions: 3
+        replicas: 3
+        min-in-sync-replicas: 2
+      security:
+        name: ${SECURITY_TOPIC_NAME}
+        partitions: 3
+        replicas: 3
+        min-in-sync-replicas: 2
+      notification:
+        name: ${NOTIFICATION_TOPIC_NAME}
+        partitions: 3
+        replicas: 3
+        min-in-sync-replicas: 2
