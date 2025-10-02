@@ -11,5 +11,5 @@ spring:
         spring:
           json:
             trusted:
-              packages: by.javaguru.jdmik7.relocationservice.usecases.dto
+              packages: by.javaguru.jdmik7.core.command
       bootstrap-servers: localhost:9091,localhost:9092
