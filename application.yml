@@ -10,22 +10,22 @@ app:
   kafka:
     topics:
       relocation:
-        name: ${RELOCATION_TOPIC_NAME}
+        name: relocation_responses_events_topic
         partitions: 3
         replicas: 3
         minInSyncReplicas: 2
       accounting:
-        name: ${ACCOUNTING_TOPIC_NAME}
+        name: budget_request_created_events_topic
         partitions: 3
         replicas: 3
         minInSyncReplicas: 2
       security:
-        name: ${SECURITY_TOPIC_NAME}
+        name: security_request_created_events_topic
         partitions: 3
         replicas: 3
         minInSyncReplicas: 2
       notification:
-        name: ${NOTIFICATION_TOPIC_NAME}
+        name: notification_events_topic
         partitions: 3
         replicas: 3
         minInSyncReplicas: 2
