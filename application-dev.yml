@@ -1,3 +1,8 @@
 logging:
   level:
     root: INFO
+spring:
+  kafka:
+    error:
+      retry-interval: 3000
+      max-attempts: 3
