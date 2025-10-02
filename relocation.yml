@@ -1,8 +1,5 @@
 spring:
   kafka:
-    error:
-      retry-interval: 3000
-      max-attempts: 3
     consumer:
       group-id: relocation-request-events
       properties:
