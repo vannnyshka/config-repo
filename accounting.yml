@@ -31,13 +31,4 @@ spring:
         request:
           timeout:
             ms: 30000
-producer:
-  relocation:
-    responses:
-      topic:
-        name: ${RELOCATION_RESPONSES_TOPIC_NAME}
-consumer:
-  accounting:
-    topic:
-      name: ${ACCOUNTING_CONSUMER_TOPIC_NAME}
 
