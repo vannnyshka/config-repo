@@ -14,3 +14,15 @@ spring:
     password: ""
   liquibase:
     enabled: false
+
+app:
+  kafka:
+    topics:
+      relocation:
+        name: "test-relocation-topic"
+      accounting:
+        name: "test-accounting-topic"
+      security: 
+        name: "test-security-topic"
+      notification:
+        name: "test-notification-topic"
