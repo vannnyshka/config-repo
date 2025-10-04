@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    consumer:
+      group-id: accounting-request-events
+      auto-offset-reset: earliest
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: by.javaguru.jdmik7.core.command
