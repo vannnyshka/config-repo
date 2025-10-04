@@ -8,3 +8,9 @@ spring:
           json:
             trusted:
               packages: by.javaguru.jdmik7.core.command
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: ""
+  liquibase:
+    enabled: false
