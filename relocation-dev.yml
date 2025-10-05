@@ -2,6 +2,12 @@ logging:
   by.javaguru.jdmik7.relocationservice: DEBUG
   org.hibernate.SQL: DEBUG
   org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  level:
+    org:
+      springframework:
+        orm:
+          jpa:
+            JpaTransactionManager: DEBUG
 
 management:
   endpoints:
