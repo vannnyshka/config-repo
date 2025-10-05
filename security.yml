@@ -12,7 +12,7 @@ spring:
     name: SECURITY-SERVICE
   kafka:
     consumer:
-      isolation-level: READ_COMMITED
+      isolation-level: READ_COMMITTED
       group-id: security-request-events
       properties:
         spring:
