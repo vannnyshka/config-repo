@@ -8,6 +8,12 @@ logging:
         orm:
           jpa:
             JpaTransactionManager: DEBUG
+      apache:
+        kafka:
+          clients:
+            producer:
+              internals:
+                TransactionManager: DEBUG
 
 management:
   endpoints:
