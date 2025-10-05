@@ -9,6 +9,7 @@ spring:
               packages: by.javaguru.jdmik7.core.event
       bootstrap-servers: localhost:9091,localhost:9092
     producer:
+      transaction-id-prefix: relocation-service-${random.value}
       bootstrap-servers: localhost:9091,localhost:9092
       acks: all
       properties:
