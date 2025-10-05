@@ -12,6 +12,7 @@ spring:
     name: ACCOUNTING-SERVICE
   kafka:
     consumer:
+      isolation-level: READ_COMMITED
       group-id: accounting-request-events
       properties:
         spring:
