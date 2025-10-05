@@ -6,7 +6,7 @@ spring:
       retry-interval: 3000
       max-attempts: 3
     consumer:
-      isolation-level: READ_COMMITED
+      isolation-level: READ_COMMITTED
       group-id: notification-request-events
       properties:
         spring:
