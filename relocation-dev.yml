@@ -7,13 +7,13 @@ logging:
       springframework:
         orm:
           jpa:
-            JpaTransactionManager: DEBUG
+            JpaTransactionManager: INFO
       apache:
         kafka:
           clients:
             producer:
               internals:
-                TransactionManager: DEBUG
+                TransactionManager: INFO
 
 management:
   endpoints:
