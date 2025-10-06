@@ -6,6 +6,12 @@ eureka:
       defaultZone: http://localhost:8087/eureka/
   instance:
     prefer-ip-address: true
+outbox:
+  scheduler:
+    pool-size: 3
+    interval-ms: 5000
+    initial-delay-ms: 0
+    initial-offset-ms: 1500
 app:
   kafka:
     topics:
