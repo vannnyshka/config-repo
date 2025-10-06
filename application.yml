@@ -19,13 +19,16 @@ app:
         partitions: 3
         replicas: 3
         minInSyncReplicas: 2
+        dtoClass: "by.javaguru.jdmik7.core.command.AllocateBudgetCommand"
       security:
         name: ${SECURITY_TOPIC_NAME}
         partitions: 3
         replicas: 3
         minInSyncReplicas: 2
+        dtoClass: "by.javaguru.jdmik7.core.command.SecurityCheckCommand"
       notification:
         name: ${NOTIFICATION_TOPIC_NAME}
         partitions: 3
         replicas: 3
         minInSyncReplicas: 2
+        dtoClass: "by.javaguru.jdmik7.core.command.NotifyCommand"
