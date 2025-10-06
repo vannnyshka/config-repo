@@ -12,6 +12,7 @@ outbox:
     interval-ms: 5000
     initial-delay-ms: 0
     initial-offset-ms: 1500
+    batch-size: 100
 app:
   kafka:
     topics:
