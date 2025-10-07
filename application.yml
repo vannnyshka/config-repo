@@ -18,21 +18,21 @@ app:
     topics:
       relocation:
         name: ${RELOCATION_TOPIC_NAME}
-        partitions: 3
-        replicas: 3
-        minInSyncReplicas: 2
+        partitions: 1
+        replicas: 1
+        minInSyncReplicas: 1
       accounting:
         name: ${ACCOUNTING_TOPIC_NAME}
-        partitions: 3
-        replicas: 3
-        minInSyncReplicas: 2
+        partitions: 1
+        replicas: 1
+        minInSyncReplicas: 1
       security:
         name: ${SECURITY_TOPIC_NAME}
-        partitions: 3
-        replicas: 3
-        minInSyncReplicas: 2
+        partitions: 1
+        replicas: 1
+        minInSyncReplicas: 1
       notification:
         name: ${NOTIFICATION_TOPIC_NAME}
-        partitions: 3
-        replicas: 3
-        minInSyncReplicas: 2
+        partitions: 1
+        replicas: 1
+        minInSyncReplicas: 1
